@@ -3,7 +3,7 @@ import { Redirect, router } from "expo-router";
 import { View, Text, Image, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { images } from "../costants"; 
+import { images } from "../costants";
 import CustomButton from "../components/CustomButton";
 
 const Welcome = () => {
@@ -14,10 +14,10 @@ const Welcome = () => {
                     height: "100%",
                 }}
             >
-                <View className="w-full flex justify-center items-center h-full px-4">
+                <View className="w-full justify-center items-center h-full px-4">
                     <Image
                         source={images.logo}
-                        className="w-[130px] h-[84px]"
+                        className="w-[190px] h-[84px]"
                         resizeMode="contain"
                     />
 
@@ -29,9 +29,10 @@ const Welcome = () => {
 
                     <View className="relative mt-5">
                         <Text className="text-3xl text-white font-bold text-center">
-                            Discover Endless{"\n"}
-                            Possibilities with{" "}
-                            <Text className="text-secondary-200">Aora</Text>
+                            Candidature selezioni{"\n"}
+                            <Text className="text-secondary-200">
+                                Compasso d'oro 2022
+                            </Text>
                         </Text>
 
                         <Image
@@ -42,13 +43,13 @@ const Welcome = () => {
                     </View>
 
                     <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
-                        Where Creativity Meets Innovation: Embark on a Journey
-                        of Limitless Exploration with Aora
+                        Le candidature per le selezioni adi design index 2024
+                        sono aperte fino al 22 febbraio 2024
                     </Text>
 
                     <CustomButton
                         title="Continue with Email"
-                        handlePress={() => router.push("/sign-in")}
+                        handlePress={() => router.push("/login")}
                         containerStyles="w-full mt-7"
                     />
                 </View>

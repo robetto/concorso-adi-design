@@ -1,8 +1,8 @@
 {
     "expo": {
-        "name": "Aora",
-        "slug": "aora",
-        "scheme": "aora",
+        "name": "Compasso d'oro",
+        "slug": "compassodoro",
+        "scheme": "compassodoro",
         "version": "1.0.0",
         "orientation": "portrait",
         "icon": "./assets/icon.png",
@@ -20,7 +20,8 @@
             "adaptiveIcon": {
                 "foregroundImage": "./assets/adaptive-icon.png",
                 "backgroundColor": "#ffffff"
-            }
+            },
+            "package": "com.adi.compassodoro"
         },
         "web": {
             "favicon": "./assets/favicon.png"
