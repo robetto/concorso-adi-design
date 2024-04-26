@@ -5,8 +5,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { images } from "../costants";
 import CustomButton from "../components/CustomButton";
+import { useContext } from "react";
+import { useGlobalContext } from "../context/GlobalProvider";
 
 const Welcome = () => {
+    const { isLoading, isLogged } = useGlobalContext();
+
+    if (!isLoading && isLogged) return <Redirect href="/home" />
+
     return (
         <SafeAreaView className="bg-primary h-full">
             <ScrollView
@@ -20,7 +26,7 @@ const Welcome = () => {
                         className="w-[190px] h-[84px]"
                         resizeMode="contain"
                     />
-
+                    <Text className="color-white">{isLogged ? "loggato" : "non loggato"}</Text>
                     <Image
                         source={images.cards}
                         className="max-w-[380px] w-full h-[298px]"
