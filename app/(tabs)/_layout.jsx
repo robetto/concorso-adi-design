@@ -6,7 +6,7 @@ import { icons } from "../../costants";
 
 const TabIcon = ({ icon, color, name, focused }) => {
     return (
-        <View className="items-center justify-center gap-2">
+        <View className="flex items-center justify-center gap-2">
             <Image
                 source={icon}
                 resizeMode="contain"

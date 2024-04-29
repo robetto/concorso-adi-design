@@ -3,7 +3,7 @@ import React from "react";
 
 const Bookmark = () => {
     return (
-        <View>
+        <View className="h-full bg-primary">
             <Text>Bookmark</Text>
         </View>
     );
