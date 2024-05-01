@@ -9,6 +9,7 @@ import { Link, router } from "expo-router";
 import { createUser } from "../../lib/appwrite";
 
 const Registrati = () => {
+    const { setUser, setIsLogged } = useGlobalContext();
     const [form, setForm] = useState({
         username: "",
         email: "",
@@ -25,8 +26,16 @@ const Registrati = () => {
         setIsSubmitting(true);
 
         try {
-            const result = await createUser(form.email, form.password, form.username);
-            router.replace("/home")
+            const result = await createUser(
+                form.email,
+                form.password,
+                form.username
+            );
+
+            setUser(result);
+            setIsLogged(true);
+
+            router.replace("/home");
         } catch (error) {
             Alert.alert("Error", error.message);
         } finally {

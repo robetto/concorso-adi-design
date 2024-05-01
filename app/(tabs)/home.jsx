@@ -12,6 +12,7 @@ import useAppwrite from "../../lib/useAppwrite";
 import VideoCard from "../../components/VideoCard";
 
 const Home = () => {
+    const { user, setUser, setIsLogged } = useGlobalContext();
     const [refreshing, setRefreshing] = useState(false);
 
     const { data: posts, refetch } = useAppwrite(getAllPosts);
@@ -44,10 +45,10 @@ const Home = () => {
                         <View className="justify-between items-start flex-row mb-6">
                             <View className="flex">
                                 <Text className="font-pmedium text-sm text-gray-100">
-                                    Welcome Back
+                                    Welcome Back,
                                 </Text>
                                 <Text className="text-2xl text-white font-psemibold">
-                                    JS Mastery
+                                    {user?.username}
                                 </Text>
                             </View>
 
